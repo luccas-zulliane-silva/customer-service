@@ -1,0 +1,77 @@
+{ 
+  // Configuracoes globais do python
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.languageServer": "Pylance",
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}"   // adiciona a raiz no PYTHONPATH
+  ],
+
+  // Para mostrar a hierarquia de arquivos e classes
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+
+  // Configuracoes do code runner
+  "code-runner.executorMap": {
+    "python": "venv/Scripts/python",
+  },
+
+  // Configuracoes do depurador
+  "debug.inlineValues": "off",
+
+  // Configuracoes do editor para python
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  "black-formatter.args": ["--line-length", "80"],
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "OM Theme (Night Owl Italic)",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#000",
+    "terminal.foreground": "#00FF00",
+  },
+
+  // Outras configuracoes globais do editor
+  "editor.tabSize": 4,
+  "editor.rulers": [80, 120],
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "Cascadia Code",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 20,
+  "editor.formatOnSave": true,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "variable": {
+        "fontStyle": ""
+      },
+      "parameter": {
+        "fontStyle": "italic"
+      },
+      "function": {
+        "fontStyle": "italic"
+      },
+      "method": {
+        "fontStyle": "italic"
+      },
+      "property": {
+        "fontStyle": ""
+      },
+      "class": {
+        "fontStyle": "bold"
+      }
+    }
+  },
+  "autoDocstring.docstringFormat": "numpy",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportPrivateUsage": "error"
+  },
+  "files.autoSave": "onFocusChange",
+
+  // Configuracoes do terminal integrado
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+
+  // Configuracoes do explorador de arquivos
+  "explorer.compactFolders": true,
+}
